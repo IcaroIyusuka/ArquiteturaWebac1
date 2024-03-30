@@ -2,6 +2,8 @@ package me.icaro.Ac1.controller;
 
 
 import me.icaro.Ac1.modelo.Aluno;
+import me.icaro.Ac1.repository.AlunoRepository;
+import me.icaro.Ac1.service.AlunoService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -10,56 +12,26 @@ import java.util.List;
 @RestController
 @RequestMapping("/alunos")
 public class AlunoController {
-    private List<Aluno> alunos = new ArrayList<>();
-    private Long idCounter = 1L;
 
-    public AlunoController (){
+    private final AlunoService alunoService;
 
-        alunos.add(new Aluno(idCounter,
-                "jose",
-                "M" ,
-                "ze@pode",
-                "flamengos"));
+    public AlunoController(AlunoService alunoService){
+        this.alunoService = alunoService;
     }
 
     @GetMapping
-    public List<Aluno> getAllAlunos() {
-        return alunos;
-    }
-
-    @PostMapping
-    public Aluno addAluno(@RequestBody Aluno aluno) {
-        aluno.setId(idCounter++);
-        alunos.add(aluno);
-        return aluno;
+    public List<Aluno> getAllAluno(){
+        return alunoService.getAllAluno();
     }
 
     @GetMapping("/{id}")
-    public Aluno getAlunoById(@PathVariable Long id) {
-        for (Aluno aluno : alunos) {
-            if (aluno.getId().equals(id)) {
-                return aluno;
-            }
-        }
-        return null; // or throw exception
+    public Aluno getAlunoById(@PathVariable Long id){
+        return alunoService.getAlunoById(id);
     }
 
-    @PutMapping("/alunos/{id}")
-    public Aluno updateAluno(@PathVariable Long id, @RequestBody Aluno updatedAluno) {
-        for (Aluno aluno : alunos) {
-            if (aluno.getId().equals(id)) {
-                aluno.setNome(updatedAluno.getNome());
-                aluno.setSexo(updatedAluno.getSexo());
-                aluno.setEmail(updatedAluno.getEmail());
-                aluno.setTelefone(updatedAluno.getTelefone());
-                return aluno;
-            }
-        }
-        return null; // or throw exception
+    @PostMapping("/add")
+    public Aluno createAluno(@RequestBody Aluno aluno){
+        return alunoService.createAluno(aluno);
     }
 
-    @DeleteMapping("/{id}")
-    public void deleteAluno(@PathVariable Long id) {
-        alunos.removeIf(aluno -> aluno.getId().equals(id));
-    }
 }
