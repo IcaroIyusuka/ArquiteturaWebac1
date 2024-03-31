@@ -1,7 +1,16 @@
 package me.icaro.Ac1.modelo;
 
-public class Aluno {
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "aluno")
+public class Aluno {
+    @Id
     private Long id;
     private String nome;
     private String sexo;
@@ -15,6 +24,7 @@ public class Aluno {
         this.email = email;
         this.telefone = telefone;
     }
+    public Aluno () {}
 
     public Long getId() {
         return id;

@@ -1,7 +1,7 @@
 package me.icaro.Ac1.service;
 
 import me.icaro.Ac1.modelo.Aluno;
-import me.icaro.Ac1.repository.AlunoRepository;
+import me.icaro.Ac1.modelo.AlunoRepository;
 
 import org.springframework.stereotype.Service;
 
@@ -27,5 +27,10 @@ public class AlunoServiceImpl implements AlunoService {
     @Override
     public Aluno createAluno(Aluno aluno){
         return alunoRepository.save(aluno);
+    }
+
+    @Override
+    public Aluno removeAluno(int id){
+        return alunoRepository.delete(id);
     }
 }

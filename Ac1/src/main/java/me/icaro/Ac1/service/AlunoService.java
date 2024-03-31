@@ -9,4 +9,5 @@ public interface AlunoService {
     Aluno getAlunoById(Long id);
 
     Aluno createAluno(Aluno aluno);
+    Aluno removeAluno(int id);
 }
