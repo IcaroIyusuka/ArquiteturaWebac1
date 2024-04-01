@@ -26,6 +26,12 @@ public class AlunoRepositoryImpl implements AlunoRepository {
                 .findFirst()
                 .orElse(null);
     }
+    public Aluno findByNome(String nome){
+        return alunos.stream()
+                .filter(aluno -> aluno.getNome().equals(nome))
+                .findFirst()
+                .orElse(null);
+    }
 
     @Override
     public Aluno save(Aluno aluno) {
@@ -37,5 +43,10 @@ public class AlunoRepositoryImpl implements AlunoRepository {
             alunos.add(aluno);
         }
         return aluno;
+    }
+
+    public void deleteById(Long id){
+        System.out.printf("DELETE/id - Recebendo o id: %d para excluir um usuário%n", id);
+        System.out.println(id);
     }
 }

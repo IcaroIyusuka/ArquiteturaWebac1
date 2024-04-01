@@ -8,5 +8,11 @@ public interface AlunoService {
 
     Aluno getAlunoById(Long id);
 
+    Aluno getAlunoByNome(String nome);
+
     Aluno createAluno(Aluno aluno);
+
+    void deleteById(Long id);
+
+    Aluno findByNome(String nomeAluno);
 }

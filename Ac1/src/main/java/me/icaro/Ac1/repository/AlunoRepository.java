@@ -7,9 +7,13 @@ import java.util.List;
 
 public interface AlunoRepository {
 
+
+
     List<Aluno> findAll();
 
     Aluno findById(Long id);
 
     Aluno save(Aluno aluno);
+
+    Aluno findByNome(String nome);
 }
