@@ -24,6 +24,8 @@ public class AlunoController {
         return alunoService.getAllAluno();
     }
 
+
+
     @GetMapping("/{id}")
     public Aluno getAlunoById(@PathVariable Long id){
         return alunoService.getAlunoById(id);
@@ -34,4 +36,13 @@ public class AlunoController {
         return alunoService.createAluno(aluno);
     }
 
+    @DeleteMapping("/delete/{id}")
+    public void deleteAluno(@PathVariable("id") Long id){
+        alunoService.deleteById(id);
+    }
+
+    @PutMapping("/update/{id}")
+    public String putAluno(@PathVariable ("id") Long id, @RequestBody Aluno aluno){
+        return "atualizado com sucesso" + id;
+    }
 }

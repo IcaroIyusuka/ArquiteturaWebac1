@@ -28,4 +28,9 @@ public class AlunoServiceImpl implements AlunoService {
     public Aluno createAluno(Aluno aluno){
         return alunoRepository.save(aluno);
     }
+
+    @Override
+    public void deleteById(Long id) {
+
+    }
 }

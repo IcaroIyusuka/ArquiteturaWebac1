@@ -3,6 +3,7 @@ package me.icaro.Ac1.repository;
 import me.icaro.Ac1.modelo.Aluno;
 import org.springframework.stereotype.Repository;
 import org.springframework.jdbc.core.JdbcTemplate;
+
 import java.util.List;
 
 @Repository
@@ -45,6 +46,10 @@ public class AlunoRepositoryImpl implements AlunoRepository {
                 );
     }
 
+    public void deleteById(Long id) {
+        String querry = "DELETE FROM aluno where id = ?";
+        jdbcTemplate.update(querry, id);
+    }
     @Override
     public Aluno save(Aluno aluno){
         if (aluno.getId() != null){
@@ -59,5 +64,7 @@ public class AlunoRepositoryImpl implements AlunoRepository {
         return aluno;
 
     }
+
+
 
 }
