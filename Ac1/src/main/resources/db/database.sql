@@ -4,7 +4,7 @@
 
 CREATE DATABASE alunos
     WITH
-    OWNER = postgres
+    OWNER = icaro
     ENCODING = 'UTF8'
     LC_COLLATE = 'Portuguese_Brazil.1252'
     LC_CTYPE = 'Portuguese_Brazil.1252'
@@ -13,7 +13,7 @@ CREATE DATABASE alunos
     CONNECTION LIMIT = -1
     IS_TEMPLATE = False;
 
--- Criação da tabela 'task'
+-- Criação da tabela 'aluno'
 CREATE TABLE IF NOT EXISTS public.aluno
 (
     id SERIAL PRIMARY KEY,
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS public.aluno
     telefone VARCHAR(20)
 );
 
--- Altera o dono da tabela 'task'
+-- Altera o dono da tabela 'aluno'
 ALTER TABLE IF EXISTS public.aluno
     OWNER TO icaro;
 

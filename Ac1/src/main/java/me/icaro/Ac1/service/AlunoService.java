@@ -10,5 +10,7 @@ public interface AlunoService {
 
     Aluno createAluno(Aluno aluno);
 
-    void deleteById(Long id);
+    Aluno deleteById(Long id);
+
+    Aluno update(Aluno aluno);
 }

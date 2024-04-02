@@ -1,7 +1,6 @@
 package me.icaro.Ac1.repository;
 
 import me.icaro.Ac1.modelo.Aluno;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -12,4 +11,7 @@ public interface AlunoRepository {
     Aluno findById(Long id);
 
     Aluno save(Aluno aluno);
+
+    Aluno deleteById(Long id);
+    Aluno update(Aluno aluno);
 }

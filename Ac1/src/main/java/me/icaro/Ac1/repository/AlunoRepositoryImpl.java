@@ -46,9 +46,10 @@ public class AlunoRepositoryImpl implements AlunoRepository {
                 );
     }
 
-    public void deleteById(Long id) {
-        String querry = "DELETE FROM aluno where id = ?";
+    public Aluno deleteById(Long id) {
+        String querry = "DELETE FROM public.aluno where id = ?";
         jdbcTemplate.update(querry, id);
+        return null;
     }
     @Override
     public Aluno save(Aluno aluno){
@@ -58,13 +59,20 @@ public class AlunoRepositoryImpl implements AlunoRepository {
             jdbcTemplate.update(insertQuery, aluno.getId(), aluno.getNome(), aluno.getSexo(), aluno.getEmail(), aluno.getTelefone());
 
         } else{
-            String updateQuery = "UPDATE public.aluno SET nome = ?, sexo = ?, email = ?, telefone = ? WHERE id = ?";
-            jdbcTemplate.update(updateQuery, aluno.getNome(), aluno.getSexo(), aluno.getEmail(), aluno.getTelefone(), aluno.getId());
+
         }
         return aluno;
 
     }
 
+
+    public Aluno update(Aluno aluno){
+      {
+            String update = "UPDATE public.aluno SET nome = ?, sexo = ?, email = ?, telefone = ? WHERE id = ?";
+            jdbcTemplate.update(update, aluno.getNome(), aluno.getSexo(), aluno.getEmail(), aluno.getTelefone(), aluno.getId());
+        }
+        return aluno;
+    }
 
 
 }
