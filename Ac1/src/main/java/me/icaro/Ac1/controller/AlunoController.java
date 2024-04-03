@@ -32,6 +32,12 @@ public class AlunoController {
         return alunoService.createAluno(aluno);
     }
 
+    @PutMapping("/update/{id}")
+    public Aluno updateAluno(@PathVariable ("id") Long id, @RequestBody Aluno aluno){
+        return alunoService.updateAluno(aluno);
+    }
+
+
     @DeleteMapping("/remove/{id}")
     public Aluno removeAluno(@PathVariable int id){
         return alunoService.removeAluno(id);

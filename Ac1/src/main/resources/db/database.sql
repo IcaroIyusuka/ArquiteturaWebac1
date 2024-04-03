@@ -13,7 +13,7 @@ CREATE DATABASE alunos
     CONNECTION LIMIT = -1
     IS_TEMPLATE = False;
 
--- Criação da tabela 'task'
+-- Criação da tabela 'aluno'
 CREATE TABLE IF NOT EXISTS public.aluno
 (
     id SERIAL PRIMARY KEY,
