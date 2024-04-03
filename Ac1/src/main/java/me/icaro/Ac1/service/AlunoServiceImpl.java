@@ -28,7 +28,12 @@ public class AlunoServiceImpl implements AlunoService {
     public Aluno createAluno(Aluno aluno){
         return alunoRepository.save(aluno);
     }
-
+    
+    //@Override
+    //public Aluno updateAluno(Aluno aluno){    
+   //return alunoRepository.update(aluno);    
+    //}
+    
     @Override
     public Aluno removeAluno(int id){
         return alunoRepository.delete(id);
