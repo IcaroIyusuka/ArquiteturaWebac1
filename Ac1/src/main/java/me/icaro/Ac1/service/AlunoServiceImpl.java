@@ -29,13 +29,15 @@ public class AlunoServiceImpl implements AlunoService {
         return alunoRepository.save(aluno);
     }
     
-    @Override
-    public Aluno updateAluno(Aluno aluno){
-    return alunoRepository.update(aluno);
-    }
+
     
     @Override
     public Aluno removeAluno(int id){
         return alunoRepository.delete(id);
+    }
+
+    @Override
+    public Aluno updateAluno(Aluno aluno) {
+        return null;
     }
 }

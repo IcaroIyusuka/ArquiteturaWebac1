@@ -11,6 +11,7 @@ import jakarta.persistence.Table;
 @Table(name = "aluno")
 public class Aluno {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Estratégia de geração de identificador
     private Long id;
     private String nome;
     private String sexo;

@@ -7,7 +7,6 @@ public interface AlunoRepository {
 
     List<Aluno> findAll();
 
-    Aluno createAluno(Aluno aluno);
 
     Aluno findById(Long id);
 
@@ -15,5 +14,5 @@ public interface AlunoRepository {
 
     Aluno delete(int id);
 
-    Aluno update(Aluno aluno);
+
 }

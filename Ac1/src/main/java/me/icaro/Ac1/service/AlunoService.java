@@ -10,7 +10,7 @@ public interface AlunoService {
 
     Aluno createAluno(Aluno aluno);
 
-    Aluno updateAluno(Aluno aluno);
-
     Aluno removeAluno(int id);
+
+    Aluno updateAluno(Aluno aluno);
 }
