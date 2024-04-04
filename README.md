@@ -1,6 +1,6 @@
 # ArquiteturaWebac1
 
-# Nessa etapa foi adicionado as pastas service e repositiry
+# Nessa etapa foi adicionado as pastas service e repository
 
 ##GET
 ![aula4get](https://github.com/IcaroIyusuka/ArquiteturaWebac1/assets/115050400/aa9fd64a-1e0e-428f-a5d0-d3157cbba896)
