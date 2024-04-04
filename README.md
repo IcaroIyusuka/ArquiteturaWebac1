@@ -1,15 +1,16 @@
 # ArquiteturaWebac1
 
-### Nessa etapa criamos um banco de dados e fizemos um vinculo entre ele e a API
+### Nessa etapa aplicamos o hibernate 
 
 ## GET
-![getaula5](https://github.com/IcaroIyusuka/ArquiteturaWebac1/assets/115050400/851b024f-d921-40c4-a685-937991f0b018)
+![aula6get](https://github.com/IcaroIyusuka/ArquiteturaWebac1/assets/115050400/b43fc45a-1993-4325-9ce3-d8c9f4749b24)
 
 ## POST
-![postaula5](https://github.com/IcaroIyusuka/ArquiteturaWebac1/assets/115050400/187f1f07-2348-4151-a01e-b1c9b7708f63)
+![postaula6](https://github.com/IcaroIyusuka/ArquiteturaWebac1/assets/115050400/1f6727d2-af45-4218-9b41-679a74c594c7)
 
 ## PUT
-![putaula5](https://github.com/IcaroIyusuka/ArquiteturaWebac1/assets/115050400/ab0efece-1d00-4566-968d-f83c9193c6b6)
+![aula6put](https://github.com/IcaroIyusuka/ArquiteturaWebac1/assets/115050400/75d2534b-64d9-40bf-9b59-dd90b5a1a2e9)
 
 ## DELETE
-![deleteaula5](https://github.com/IcaroIyusuka/ArquiteturaWebac1/assets/115050400/c91080fc-0fc3-4309-98b7-b47276d4896e)
+![removeaula6](https://github.com/IcaroIyusuka/ArquiteturaWebac1/assets/115050400/5d09f161-671c-427e-885f-f969ac428e8a)
+
