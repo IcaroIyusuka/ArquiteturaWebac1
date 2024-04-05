@@ -1,5 +1,8 @@
 # ArquiteturaWebac1
 
+# Ordem main, aula 4, aula 5.2-update, aula 6.3
+São as branchs que estão funcionais e com as imagens dos testes 
+
 ## Get 
 ![getaula3](https://github.com/IcaroIyusuka/ArquiteturaWebac1/assets/115050400/0b70a9d4-33a7-48b8-a82f-acb3aa2a0363)
 
